@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 70px;
 
 }
@@ -28,12 +28,23 @@
     display: flex;
     align-items: center;
     background-color: #fff;
+    width: 60%;
+    margin-left: 5px;
+
+}
+
+.searchBox {
+    display: flex;
+    width: 100%;
     border: 1px solid black;
     border-radius: 50px;
-    padding: 5px 1px;
-    width: 60%;
-    height: 35px;
     margin-left: 6px;
+    padding: 1px 0;
+}
+
+.searchBox :placeholder-shown {
+    text-align: right;
+    opacity: 0.6;
 
 }
 
@@ -45,10 +56,14 @@
 
 }
 
+.search-btn:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
 .search-btn span {
     font-size: 18px;
 }
-
 
 .img-search-btn {
     border: none;
@@ -56,13 +71,20 @@
     background: none;
 }
 
+.searchLogo:hover {
+    cursor: pointer;
+
+}
+
+
 .searchWraper input {
     border: none;
-    font-size: 14px;
-    padding-right: 20px;
-    text-align: right;
-    margin-left: 64%;
-    opacity: 0.7;
+    outline: none;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #333;
+    width: 85%;
+    text-align: left;
 }
 
 .searchWraper input ::placeholder {
@@ -82,7 +104,7 @@
 .appDownload {
     display: flex;
     align-items: center;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-left: 25px;
     height: 100%;
     gap: 2px;
@@ -106,7 +128,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-left: 15px;
     height: 100%;
     gap: 1px;
@@ -125,7 +147,7 @@
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-left: 20px;
     height: 100%;
 }
@@ -134,7 +156,7 @@
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     /* padding: 8px; */
     gap: 5px;
 }
@@ -147,7 +169,7 @@
 }
 
 .chartInfoWraper :nth-child(1) {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     border-radius: 20px;
     width: 25px;
     height: 15px;
@@ -245,6 +267,7 @@
     display: flex;
     border: 1px solid blue;
     padding: 0 50px;
+    margin-top: 10px;
 }
 
 .sideWraper {
@@ -253,7 +276,7 @@
 
 .sideBar {
     flex-basis: 23.5%;
-    border: 1px solid blue;
+    border: 1px solid rgb(235, 235, 235);
 }
 
 .rightBar {
@@ -261,13 +284,18 @@
     border: 1px solid blue;
 }
 
+/* LEFTSIDE */
 .storeInfo {
     display: flex;
     align-items: center;
-    border: 1px solid blue;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding-top: 15px;
 
+}
+
+.storeInfo>h6 {
+    font-size: 14px;
 }
 
 .storePopup {
@@ -275,8 +303,139 @@
     flex-direction: row-reverse;
 }
 
-.brLine {
-    border: 2px solid red;
+.storePopup h6 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.breakLine {
+    border: 1px solid gray;
+    margin: 10px 0;
+    opacity: 0.3;
+}
+
+.storeMsg {
+    opacity: 0.5;
+}
+
+.ChoiceLogo {
+    background-color: #fae683;
+    padding: 2px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+
+.shippingInfo {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(60deg, #f0ffe8 10%, #fbfef9 90%);
+    height: 45px;
+    gap: 5px;
+}
+
+.ShippingCompany {
+    color: #2abd05;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.deliveryInfo {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+}
+
+.shippingLogo {
+    margin-left: 5px;
+}
+
+.deliveryTime {
+    width: 90%;
+}
+
+.deliveryTime h6 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    margin: 5px 0;
+}
+
+.deliveryTime span {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.returnInfo {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.returnLogo {
+    margin-left: 5px;
+}
+
+.returnExp {
+    width: 90%;
+}
+
+.returnExp h6 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    margin: 5px 0;
+}
+
+
+.securtyNprivicy {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.securtyLogo {
+    margin-left: 5px;
+}
+
+.securtyExp {
+    width: 90%;
+}
+
+.securtyExp h6 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    margin: 5px 0;
+
+}
+
+.securtyInfo {
+    width: 300px;
+}
+
+.securtyInfo h6 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: rtl;
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+
+
+
+
+
+/* END LEFTSIDE */
+
+
+
+.rightBar {
+    height: 1000vb;
 }
 
 /* END BODY  */
