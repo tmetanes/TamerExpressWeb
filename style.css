@@ -6,13 +6,13 @@
 }
 
 header {
-    position: sticky;
     z-index: 1000;
-    top: 0;
+
 }
 
 .navBar {
-
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,21 +280,19 @@ header {
 }
 
 .sideWraper {
-    position: sticky;
+    border: 1px solid rgb(235, 235, 235);
+    margin-top: 32px;
+    position: fixed;
     top: 70px;
-    padding: 0 13px;
+    padding: 0 13px 10px 13px;
 
 }
 
 .sideBar {
+    height: 610px;
     flex-basis: 23.5%;
-    border: 1px solid rgb(235, 235, 235);
 }
 
-.rightBar {
-    flex-basis: 76.5%;
-    border: 1px solid blue;
-}
 
 /* LEFTSIDE */
 .storeInfo {
@@ -370,7 +368,7 @@ header {
 }
 
 .deliveryTime h6 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     text-align: right;
     margin: 5px 0;
@@ -382,6 +380,7 @@ header {
 }
 
 .returnInfo {
+    margin-top: 12px;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -403,6 +402,7 @@ header {
 
 
 .securtyNprivicy {
+    margin-top: 12px;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -437,17 +437,300 @@ header {
     opacity: 0.5;
 }
 
+.qNumber {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.qInfo {
+    /* margin: 7px 0; */
+    font-size: 22px;
+    text-align: right;
+}
+
+.buttonInfo {
+    margin-top: 8px;
+}
+
+.qNumber button {
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+
+}
+
+.qNumber input {
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    width: 32px;
+    margin: 0 4px;
+    text-align: center;
+    padding-left: 10px;
 
 
+}
 
 
+.qLeft {
+    font-weight: lighter;
+    font-size: 20px;
+    margin-top: 8px;
+    text-align: right;
+}
+
+.qLeft>h6 {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.submitButtons {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 3;
+    grid-template:
+        'buyNow buyNow'
+        'addChart addChart'
+        'likes Share';
+}
+
+.buyNow {
+    font-weight: bold;
+    font-size: 17px;
+    border: none;
+    background: #d3031c;
+    color: white;
+    padding: 12px 12px;
+    margin-top: 12px;
+    grid-area: buyNow;
+}
+
+.addChart {
+    grid-area: addChart;
+    font-weight: bold;
+    font-size: 17px;
+    border: none;
+    padding: 12px 12px;
+    margin-top: 12px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.Share {
+    /* width: 90%; */
+    grid-area: Share;
+    font-weight: normal;
+    font-size: 16px;
+    border: none;
+    padding: 12px 12px;
+    margin-top: 12px;
+    background-color: #f5f5f5;
+    /* border: 1px solid black; */
+    margin-left: 5px;
+
+}
+
+.likes {
+
+    /* width: 90%; */
+    grid-area: likes;
+    font-weight: normal;
+    font-size: 16px;
+    border: none;
+    padding: 12px 12px;
+    margin-top: 12px;
+    background-color: #f5f5f5;
+    margin-right: 5px;
+}
+
+i.material-icons {
+    margin-left: 5px;
+    position: absolute;
+}
 
 /* END LEFTSIDE */
 
 
-
+/* RIGHT BAR */
+/* Left Side */
 .rightBar {
+    flex-basis: 76.5%;
+    border: 1px solid blue;
+    margin-top: 70px;
     height: 1000vb;
+    display: flex;
 }
 
+
+
+
+.productInfo {
+    margin: 32px 0 0 23px;
+    padding: 8px 16px 0 0;
+    flex-basis: 55%;
+}
+
+.productImg {
+    background-color: green;
+    flex-basis: 45%;
+}
+
+.productTitle {
+    direction: rtl;
+    font-size: 7.5px;
+
+}
+
+.productStatus {
+    direction: rtl;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+
+.productStatus::after {
+    content: "text";
+    animation: switch 4s infinite;
+    font-weight: normal;
+}
+
+@keyframes switch {
+
+    0%,
+    49% {
+        content: "2 נמכרנמכר";
+        color: black;
+
+    }
+
+    50%,
+    100% {
+        content: "מאת SZCPU Store (4.2 | 10,000+ נמכרו )";
+        color: #ab6d49;
+    }
+}
+
+
+.productPrice {
+
+    padding-top: 8px;
+}
+
+.summerRdy {
+    font-size: 11px;
+    color: red;
+}
+
+.summerEnd {
+    display: flex;
+    padding-left: 6px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.priceEnd {
+    padding: 9px 15px;
+    background-color: #d8ffe2;
+    display: flex;
+    direction: rtl;
+    justify-content: space-between;
+}
+
+.currentPrice {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+}
+
+.fixedPrice {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.savePrice {
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    text-align: right;
+}
+
+.saveNow {
+    font-weight: bold;
+    font-size: 14px;
+    padding: 4px 8px;
+    background-color: #fef3f5;
+    color: red;
+}
+
+.oldPrice {
+    opacity: 0.6;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.productVat {
+    color: #757575;
+    font-weight: normal;
+    font-size: 17px;
+    direction: rtl;
+}
+
+.productColors {
+    padding: 0 0 8px 0;
+    direction: rtl;
+    font-size: 22px;
+}
+
+.colorsImg {
+    direction: rtl;
+    display: flex;
+}
+
+.poductImg img {
+    margin: 4px 8px 4px 0;
+    height: 64px;
+    width: 64px;
+    border: 2px solid transparent;
+
+}
+
+.poductImg img:hover {
+    border-color: black;
+}
+
+/* END Left Side */
+/* RIGHT SIDE  */
+
+.productImg {
+    display: flex;
+}
+
+.mainImg {
+    flex-basis: 80%
+}
+
+.mainImg img {
+    height: 450px;
+    width: 450px;
+}
+
+.sideImgs {
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    margin-left: 8px;
+    gap: 5px;
+}
+
+
+
+
+
+
+/* RIGHT BAR */
 /* END BODY  */
