@@ -16,7 +16,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid blue; */
     height: 70px;
     background-color: white;
 
@@ -65,6 +64,12 @@ header {
 
 }
 
+.search-btn>span>i {
+    height: 5px;
+    width: 10px;
+
+}
+
 .search-btn:hover {
     background-color: #333;
     cursor: pointer;
@@ -78,6 +83,11 @@ header {
     border: none;
     padding: 0 10px;
     background: none;
+}
+
+.searchLogo>img {
+    height: 24px;
+    width: 24px;
 }
 
 .searchLogo:hover {
@@ -110,10 +120,13 @@ header {
 
 }
 
+.userWraper:hover {
+    cursor: pointer;
+}
+
 .appDownload {
     display: flex;
     align-items: center;
-    /* border: 1px solid blue; */
     margin-left: 25px;
     height: 100%;
     gap: 2px;
@@ -133,14 +146,22 @@ header {
 
 }
 
+.appDownload:hover {
+    cursor: pointer;
+}
+
 .langWraper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid blue; */
+
     margin-left: 15px;
     height: 100%;
     gap: 1px;
+}
+
+.langWraper:hover {
+    cursor: pointer;
 }
 
 .flag {
@@ -155,8 +176,6 @@ header {
 .userInfoWraper {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-    /* border: 1px solid blue; */
     margin-left: 20px;
     height: 100%;
 }
@@ -164,9 +183,6 @@ header {
 .chartWraper {
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
-    /* border: 1px solid blue; */
-    /* padding: 8px; */
     gap: 5px;
 }
 
@@ -178,7 +194,6 @@ header {
 }
 
 .chartInfoWraper :nth-child(1) {
-    /* border: 1px solid blue; */
     border-radius: 20px;
     width: 25px;
     height: 15px;
@@ -228,8 +243,9 @@ header {
 .currency h6 {
     font-size: 12px;
     font-weight: normal;
-
 }
+
+
 
 .currency h6:nth-child(2) {
     font-weight: bold;
@@ -274,8 +290,7 @@ header {
 /* Body  */
 .content {
     display: flex;
-    border: 1px solid blue;
-    padding: 0 50px;
+    padding: 0 40px 0 50px;
     /* margin-top: 10px; */
 }
 
@@ -290,7 +305,9 @@ header {
 
 .sideBar {
     height: 610px;
-    flex-basis: 23.5%;
+    /* flex-basis: 23.5%; */
+    /* flex-basis: 370px; */
+    flex: 0 0 23.5%;
 }
 
 
@@ -555,28 +572,26 @@ i.material-icons {
 
 
 /* RIGHT BAR */
-/* Left Side */
-.rightBar {
-    flex-basis: 76.5%;
-    border: 1px solid blue;
-    margin-top: 70px;
+
+.mainSide {
+    width: 23.5%;
+    flex: 0 1 76.5%;
     height: 1000vb;
-    display: flex;
 }
 
-
-
+.rightUpper {
+    margin-top: 70px;
+    display: flex;
+    height: 475px;
+}
 
 .productInfo {
     margin: 32px 0 0 23px;
     padding: 8px 16px 0 0;
-    flex-basis: 55%;
+    /* flex-basis: 55%; */
+    flex: 0 0 55%;
 }
 
-.productImg {
-    background-color: green;
-    flex-basis: 45%;
-}
 
 .productTitle {
     direction: rtl;
@@ -692,7 +707,7 @@ i.material-icons {
 }
 
 .poductImg img {
-    margin: 4px 8px 4px 0;
+    margin: 4px 1px 4px 0;
     height: 64px;
     width: 64px;
     border: 2px solid transparent;
@@ -708,24 +723,223 @@ i.material-icons {
 
 .productImg {
     display: flex;
+    text-align: right;
+    /* flex-basis: 45%; */
+    flex: 0 1 45%;
 }
 
 .mainImg {
-    flex-basis: 80%
+    /* flex-basis: 80%; */
+    flex: 0 1 86%;
+    height: 450px;
+    overflow: hidden;
 }
 
 .mainImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.mainImg img:hover {
+    transform: scale(1.5);
+}
+
+/* 
+.mainImg img {
     height: 450px;
     width: 450px;
-}
+} */
+
 
 .sideImgs {
     display: flex;
-    flex-basis: 20%;
+    flex: 0 0 14%;
     flex-direction: column;
     margin-left: 8px;
     gap: 5px;
 }
+
+.mainSide>.breakLine {
+    margin: 32px 0;
+    opacity: 0.2;
+}
+
+
+.procutMix {
+    margin-right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.productOptions {
+    padding: 31px 0;
+    display: flex;
+    direction: rtl;
+    gap: 20px;
+    font-size: 22px;
+    height: 84px;
+
+
+}
+
+.productOptions h6 {
+    font-weight: normal;
+}
+
+.productOptions h6:first-child {
+    font-weight: bold;
+}
+
+.feedback {
+    direction: rtl;
+    font-size: 13px;
+    padding: 12px 0;
+}
+
+.otherProducts {
+    direction: rtl;
+    font-size: 13px;
+}
+
+.otherProducts h1 {
+    padding: 14px 0;
+}
+
+.OtherProducts {
+    padding: 16px;
+    width: 181px;
+    /* height: 402px; */
+    height: 302px;
+    border: 1px solid #e5e5e5;
+
+}
+
+.OtherProducts div:first-child img {
+    height: 147px;
+    width: 147px;
+    /* object-fit: contain; */
+}
+
+.choiceImg .material-icons {
+    margin: 86px -38px 0 0;
+    font-size: 29px;
+    background-color: white;
+    border-radius: 25px;
+    height: 48px;
+    width: 48px;
+    padding: 10px;
+}
+
+.OtherProducts>div:nth-child(2) img {
+    height: 15.4px;
+    width: 147px;
+}
+
+.OtherProducts>div:nth-child(3) h6 {
+    font-weight: normal;
+    font-size: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.OtherProducts div:nth-child(1n)>h6>span>img {
+    height: 16px;
+    width: 35.5px;
+    margin: 0 1px 0 1px;
+}
+
+.OtherProducts>div:nth-child(4) {
+    font-size: 21px;
+    font-weight: bold;
+    color: red;
+}
+
+.OtherProducts>div:nth-child(5) {
+    font-weight: lighter;
+    display: flex;
+    font-size: 21px;
+}
+
+.OtherProducts>div:nth-child(5) span:nth-child(1n) img {
+    width: 12px;
+    height: 12px;
+}
+
+.OtherProducts>div:nth-child(6) {
+    padding: 2px 0;
+}
+
+.OtherProducts>div:nth-child(6) h6 {
+    color: red;
+    font-weight: normal;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.OtherProducts>div:nth-child(6) h6>span img {
+    height: 14px;
+    width: 12px;
+
+}
+
+.OtherProducts>div:nth-child(7) h6 {
+    color: #b37b5b;
+    font-weight: normal;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.OtherProducts>div:nth-child(7) h6>span img {
+    height: 16px;
+    width: 16px;
+
+}
+
+.preview {
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+    height: 37px;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.moreInfo {
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+    margin-top: 5px;
+    width: 100%;
+    height: 37px;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.OtherProducts:hover {
+    height: 402px;
+
+}
+
+.choiOtherProductsce:hover button {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    /* Fast fade in on hover */
+}
+
 
 
 
