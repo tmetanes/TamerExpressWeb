@@ -10,6 +10,12 @@ header {
 
 }
 
+button:hover {
+
+    cursor: pointer;
+
+}
+
 .navBar {
     width: 100%;
     position: fixed;
@@ -258,7 +264,7 @@ header {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    margin-right: 45px;
+    margin: 0px 37px 0 25px;
 }
 
 .menuLogo {
@@ -344,6 +350,7 @@ header {
 
 .storeMsg {
     opacity: 0.5;
+    margin-bottom: 18px;
 }
 
 .ChoiceLogo {
@@ -381,6 +388,10 @@ header {
     margin-left: 5px;
 }
 
+.shippingLogo i {
+    margin-top: 5px;
+}
+
 .deliveryTime {
     width: 90%;
 }
@@ -398,7 +409,7 @@ header {
 }
 
 .returnInfo {
-    margin-top: 12px;
+    margin-top: 7px;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -415,7 +426,7 @@ header {
     font-size: 14px;
     font-weight: bold;
     text-align: right;
-    margin: 5px 0;
+    margin-top: 5px;
 }
 
 
@@ -427,6 +438,10 @@ header {
 
 .securtyLogo {
     margin-left: 5px;
+}
+
+.securtyLogo i {
+    margin-top: 5px;
 }
 
 .securtyExp {
@@ -465,6 +480,7 @@ header {
     font-size: 22px;
     text-align: right;
 }
+
 
 .buttonInfo {
     margin-top: 8px;
@@ -583,11 +599,11 @@ i.material-icons {
 .rightUpper {
     margin-top: 70px;
     display: flex;
-    height: 475px;
+    height: 466px;
 }
 
 .productInfo {
-    margin: 32px 0 0 23px;
+    margin: 23px 0 0 23px;
     padding: 8px 16px 0 0;
     /* flex-basis: 55%; */
     flex: 0 0 55%;
@@ -602,7 +618,7 @@ i.material-icons {
 
 .productStatus {
     direction: rtl;
-    margin-top: 6px;
+    margin-top: 8px;
     font-size: 13px;
 }
 
@@ -693,16 +709,22 @@ i.material-icons {
 }
 
 .oldPrice {
-    opacity: 0.6;
+    opacity: 0.5;
     font-size: 12px;
     text-decoration: line-through;
+    margin-top: 4px;
 }
 
 .productVat {
     color: #757575;
-    font-weight: normal;
-    font-size: 17px;
+    font-weight: lighter;
+    font-size: 18px;
     direction: rtl;
+}
+
+.productVat h6 {
+    margin-top: 3px;
+    padding-bottom: 3px;
 }
 
 .productColors {
@@ -711,20 +733,25 @@ i.material-icons {
     font-size: 22px;
 }
 
+.productColors h6 {
+    margin-top: 15px;
+}
+
 .colorsImg {
     direction: rtl;
     display: flex;
+    gap: 6px;
 }
 
-.poductImg img {
-    margin: 4px 1px 4px 0;
+.productImg img {
+    margin: 4px 1px 9px 0;
     height: 64px;
     width: 64px;
     border: 2px solid transparent;
 
 }
 
-.poductImg img:hover {
+.productImg img:hover {
     border-color: black;
 }
 
@@ -735,7 +762,7 @@ i.material-icons {
     display: flex;
     text-align: right;
     /* flex-basis: 45%; */
-    flex: 0 1 45%;
+    /* flex: 0 1 45%; */
 }
 
 .mainImg {
@@ -769,11 +796,11 @@ i.material-icons {
     flex: 0 0 14%;
     flex-direction: column;
     margin-left: 8px;
-    gap: 5px;
+    gap: 7px;
 }
 
 .mainSide>.breakLine {
-    margin: 32px 0;
+    margin: 32px 0px 32px 23px;
     opacity: 0.2;
 }
 
